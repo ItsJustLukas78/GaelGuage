@@ -1,0 +1,21 @@
+{
+  "name": "untitled6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node --loader ts-node/esm main.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs-node": "^4.13.0",
+    "tfjs-node-save": "^0.0.2"
+  }
+}
