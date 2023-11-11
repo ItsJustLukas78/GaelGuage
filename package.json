@@ -4,7 +4,8 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "node --loader ts-node/esm main.ts"
+    "start": "node --loader ts-node/esm main.ts",
+    "start2": "node --loader ts-node/esm eventLevelModel.ts"
   },
   "keywords": [],
   "author": "",
