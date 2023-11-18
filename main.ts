@@ -4,21 +4,12 @@ import fs from 'fs';
 
 const model: tf.Sequential = tf.sequential();
 
-model.add(tf.layers.dense({
-  inputShape: [8],
-  units: 10,
-  activation: 'relu'
-}));
-
-model.add(tf.layers.dense({
-  units: 10,
-  activation: 'relu'
-}));
-
-model.add(tf.layers.dense({
-  units: 1,
-  activation: 'sigmoid'
-}));
+model.add(tf.layers.dense({ inputShape: [8], units: 64, activation: 'relu' }));
+model.add(tf.layers.dropout({ rate: 0.5 }));
+model.add(tf.layers.dense({ units: 32, activation: 'relu' }));
+model.add(tf.layers.dropout({ rate: 0.5 }));
+model.add(tf.layers.dense({ units: 16, activation: 'relu' }));
+model.add(tf.layers.dense({ units: 1, activation: 'sigmoid' }));
 
 model.compile({
   loss: 'binaryCrossentropy',
